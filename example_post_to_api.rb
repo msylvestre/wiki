@@ -5,10 +5,10 @@ require 'json'
 # curl -X POST https://push.geckoboard.com/v1/send/139717-5e43286e-3373-48d0-889a-318da998e716 -d '{"api_key":"6b33160abb082f49ae239cbf2fd154e6","data":{"item":23,"min":{"value":0}, "max":{"value":30}}}' -H "Content-Type:application/json"
 
 # Wideget URL
-rpm_widget_url 			= "https://push.geckoboard.com/v1/send/139717-5e43286e-3373-48d0-889a-318da998e716"
+rpm_widget_url 			    = "https://push.geckoboard.com/v1/send/139717-5e43286e-3373-48d0-889a-318da998e716"
 monitoring_widget_url 	= "https://push.geckoboard.com/v1/send/139717-2e05d9da-7a5a-42f9-9934-b715d4270fcf"
-text_stat_widget_url 	= "https://push.geckoboard.com/v1/send/139717-1eed5216-2242-4bf5-9d01-c474fb9c218c"
-text_widget_url 		= "https://push.geckoboard.com/v1/send/139717-f362e424-c075-4a73-9b96-032b0e073cec"
+text_stat_widget_url 	  = "https://push.geckoboard.com/v1/send/139717-1eed5216-2242-4bf5-9d01-c474fb9c218c"
+text_widget_url 		    = "https://push.geckoboard.com/v1/send/139717-f362e424-c075-4a73-9b96-032b0e073cec"
 
 rpm_jsonData = {
 	api_key:'6b33160abb082f49ae239cbf2fd154e6',
