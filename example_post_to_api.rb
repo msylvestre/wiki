@@ -1,5 +1,5 @@
 
-require 'rest_client'
+require 'rest_client' 
 require 'json'
 
 # curl -X POST https://push.geckoboard.com/v1/send/139717-5e43286e-3373-48d0-889a-318da998e716 -d '{"api_key":"6b33160abb082f49ae239cbf2fd154e6","data":{"item":23,"min":{"value":0}, "max":{"value":30}}}' -H "Content-Type:application/json"
