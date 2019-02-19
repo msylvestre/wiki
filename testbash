@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "creating a file..."
+touch hellofromgit.txt
+
+echo "writing to files..."
+echo "puttin stuff into the file" > hellofromgit.txt
+echo "Maybe another line" > hellofromgit.txt
