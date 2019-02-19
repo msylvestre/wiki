@@ -9,7 +9,7 @@ if [ $cmdline = "install" ]; then
 	
 	#echo "Adding symlink to be able to call it from anywhere"
 	#sudo ln -s $(pwd)/awsprofile /usr/local/bin/awsprofile
-	echo "Run $ sudo ln -s $(pwd)/.aws/awsprofile /usr/local/bin/awsprofile  to add a symlink"
+	echo "Run $ sudo ln -s $(pwd)/awsprofile /usr/local/bin/awsprofile  to add a symlink"
 
 	echo "now run $ nano ~/.aws/credentials.dev and put your dev creds"
 	echo "and then $ nano ~/.aws/credentials.prod and put your prod creds"
