@@ -8,7 +8,7 @@ if [ $cmdline = "install" ]; then
 	cp  ~/.aws/credentials ~/.aws/credentials.prod
 	
 	#echo "Adding symlink to be able to call it from anywhere"
-	#sudo ln -s $(pwd)/.aws/awsprofile /usr/local/bin/awsprofile
+	#sudo ln -s $(pwd)/awsprofile /usr/local/bin/awsprofile
 	echo "Run $ sudo ln -s $(pwd)/.aws/awsprofile /usr/local/bin/awsprofile  to add a symlink"
 
 	echo "now run $ nano ~/.aws/credentials.dev and put your dev creds"
