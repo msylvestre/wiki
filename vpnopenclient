@@ -11,7 +11,7 @@ if [ $cmdline = "install" ]; then
     if [ -f $FILE ]; then
     	echo "File $FILE exists."
     	echo "Creating openvpn profile"
-		#cp client.ovpn /home/$USER/client.ovpn
+		cp client.ovpn /home/$USER/client.ovpn
 	
 		echo "Adding symlink to be able to call it from anywhere"
 		sudo ln -s $(pwd)/$clientName /usr/local/bin/$clientName
