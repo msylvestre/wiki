@@ -1,0 +1,38 @@
+read -p "Enter your VPN [drive]: " cmdline
+cmdline=${cmdline:-drive}
+echo $cmdline
+
+clientName=vpnopenclient
+
+FILE=client.ovpn
+
+if [ $cmdline = "install" ]; then
+	echo "Installing openvpn client...";
+    if [ -f $FILE ]; then
+    	echo "File $FILE exists."
+    	echo "Creating openvpn profile"
+		#cp client.ovpn /home/$USER/client.ovpn
+	
+		echo "Adding symlink to be able to call it from anywhere"
+		sudo ln -s $(pwd)/$clientName /usr/local/bin/$clientName
+		sudo chmod +x $(pwd)/$clientName		
+	else
+   		echo "File $FILE does not exist. in $(pwd)"
+   		exit 1
+	fi
+
+elif [ $cmdline = "help" ]; then
+	echo "$ $clientName drive       - To start vpn for DRIVE";
+	echo "$ $clientName perso      - To start vpn for personnal";
+	echo "$ $clientName install   - To create the profile & symlink";
+
+elif [ $cmdline = "drive" ]; then
+	echo "Starting VPN for DRIVE";
+	sudo openvpn --config /home/$USER/client.ovpn --auth-user-pass --auth-retry interact
+
+elif [ $cmdline = "perso" ]; then
+	echo "Starting VPN for PERSONNAL";
+	#sudo openvpn --config /home/$USER/client.ovpn --auth-user-pass --auth-retry interact
+else
+	echo "$1 doesnt exist";
+fi
